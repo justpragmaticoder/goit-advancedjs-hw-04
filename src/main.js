@@ -7,6 +7,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 const IZI_TOAST_TIMEOUT = 2000;
 const IZI_TOAST_MAX_WIDTH = 350;
 const ITEMS_PER_PAGE = 40;
+const PHOTO_SERVICE_KEY = '44262715-0f0c36fa7bed0278a9188117f';
 
 async function searchPhotoHandler(event, inputData) {
   event.preventDefault();
@@ -122,7 +123,7 @@ function createMarkupGallary(arr) {
 async function getServicePhoto(inputData, per_page) {
   const options = {
     params: {
-      key: "40906325-3c4aeac244a0485d830cf7c70",
+      key: PHOTO_SERVICE_KEY,
       q: inputData.searchQuery,
       image_type: "photo",
       orientation: "horizontal",
